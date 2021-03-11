@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<title>動け！！！</title>
+</head>
+<body>
+	
+	<div id="contents">
+
+		<div id="draw_content">
+			<div id="draw_area">
+				<div id="img_1" class="move_img">
+					<img src="https://2.bp.blogspot.com/-ATeK3epKIZ0/XDXbikwtyqI/AAAAAAABRBE/txCvkKGRPA4B5_oeRu0gWjH8WH-65l-ZgCLcBGAs/s400/bird_Takahe.png">
+				</div>
+				<div id="img_2" class="move_img">
+					<img src="https://4.bp.blogspot.com/-hBEnxhO8fjc/W8BOGryIf2I/AAAAAAABPVs/TWoScpc8jUonypEy1Fj01n-PrC-9gI5gACLcBGAs/s400/bird_kojukei.png">
+				</div>
+				<div id="img_3" class="move_img">
+					<img src="https://4.bp.blogspot.com/-Lw4gLAV0hHU/VSufJN_gDFI/AAAAAAAAs3A/ZmbsCwudDbw/s400/bird_toki.png">
+				</div>
+			</div>
+		</div>
+		
+		<div id="menu_content">
+
+			<div id="menu_list">
+				
+				<div id="tab_list">
+					<ul>
+						<li>
+							<div class="tab_item">
+								<input id="tab_1" type="radio" name="tab" checked>
+								<label class="tab" for="tab_1">1</label>
+							</div>
+						</li>
+						<li>
+							<div class="tab_item">
+								<input id="tab_2" type="radio" name="tab">
+								<label class="tab" for="tab_2">2</label>
+							</div>
+						</li>
+						<li>
+							<div class="tab_item">
+								<input id="tab_3" type="radio" name="tab">
+								<label class="tab" for="tab_3">3</label>
+							</div>
+						</li>
+						<li>
+							<div class="tab_item">
+								<input id="tab_4" type="radio" name="tab">
+								<label class="tab" for="tab_4">…</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div id="tab_content">
+					<div id="item_1" class="tab_item">
+						<form id="item1_val" class="forms">
+							<p>
+								<label for="item1_inpX">Ｘ座標：</label>
+								<input id="item1_inpX" type="number" value="80" name="inp_x" placeholder="80" min="10" max="80">
+							</p>
+							<p>
+								<label for="item1_inpY">Ｙ座標：</label>
+								<input id="item1_inpY" type="number" value="20" name="inp_y" placeholder="20" min="10" max="80">
+							</p>
+							<p>
+								<label for="item1_moveX">Ｘ座標の移動量：</label>
+								<input id="item1_moveX" type="number" value="3" name="move_x" placeholder="3" min="0" max="15">
+							</p>
+							<p>
+								<label for="item1_moveY">Ｙ座標の移動量：</label>
+								<input id="item1_moveY" type="number" value="4" name="move_y" placeholder="4" min="0" max="15">
+							</p>
+						</form>
+						<button onclick="start(0);">START</button>
+					</div>
+					<div id="item_2" class="tab_item">
+						<form id="item2_val" class="forms">
+							<p>
+								<label for="item2_inpX">Ｘ座標：</label>
+								<input id="item2_inpX" type="number" value="80" name="inp_x" placeholder="80" min="10" max="80">
+							</p>
+							<p>
+								<label for="item2_inpY">Ｙ座標：</label>
+								<input id="item2_inpY" type="number" value="40" name="inp_y" placeholder="40" min="10" max="80">
+							</p>
+							<p>
+								<label for="item2_moveX">Ｘ座標の移動量：</label>
+								<input id="item2_moveX" type="number" value="5" name="move_x" placeholder="5" min="0" max="15">
+							</p>
+							<p>
+								<label for="item2_moveY">Ｙ座標の移動量：</label>
+								<input id="item2_moveY" type="number" value="3" name="move_y" placeholder="3" min="0" max="15">
+							</p>
+						</form>
+						<button onclick="start(1);">START</button>
+					</div>
+					<div id="item_3" class="tab_item">
+						<form id="item3_val" class="forms">
+							<p>
+								<label for="item3_inpX">Ｘ座標：</label>
+								<input id="item3_inpX" type="number" value="80" name="inp_x" placeholder="80" min="10" max="80">
+							</p>
+							<p>
+								<label for="item3_inpY">Ｙ座標：</label>
+								<input id="item3_inpY" type="number" value="60" name="inp_y" placeholder="60" min="10" max="80">
+							</p>
+							<p>
+								<label for="item3_moveX">Ｘ座標の移動量：</label>
+								<input id="item3_moveX" type="number" value="6" name="move_x" placeholder="6" min="0" max="15">
+							</p>
+							<p>
+								<label for="item3_moveY">Ｙ座標の移動量：</label>
+								<input id="item3_moveY" type="number" value="2" name="move_y" placeholder="2" min="0" max="15">
+							</p>
+						</form>
+						<button onclick="start(2);">START</button>
+					</div>
+					<div id="item_4" class="tab_item">
+						<form id="item4_val">
+							<p>表示する画像：
+								<input id="item1_check" type="checkbox" name="dis_check" checked>
+								<label for="item1_check">１</label>
+								<input id="item2_check" type="checkbox" name="dis_check" checked>
+								<label for="item2_check">２</label>
+								<input id="item2_check" type="checkbox" name="dis_check" checked>
+								<label for="item2_check">３</label>
+							</p>
+						</form>
+						<button onclick="start(3);">START</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+	
+	</div>
+	
+	
+	
+<script src="js/moved.js"></script>
+<script src="js/style.js"></script>
+</body>
+</html>
