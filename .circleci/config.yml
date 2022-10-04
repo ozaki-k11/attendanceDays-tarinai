@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
+          name: "say hello"
           command: "echo Hello, World!"
       - run:
           name: "Say"
@@ -27,4 +27,3 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - Say
